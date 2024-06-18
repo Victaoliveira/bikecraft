@@ -28,12 +28,13 @@
 .orcamento-produto,
 .orcamento-dados {
   padding: 60px;
-  box-shadow: 0 1px 2px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .orcamento-produto {
   border-radius: 5px 0 0 5px;
-  background: var(--cor-12) url(../../img/dec/bottom-left.svg) no-repeat bottom 20px left 20px;
+  background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat
+    bottom 20px left 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -89,7 +90,7 @@
 
 .orcamento-produto input:focus + label {
   box-shadow: 0 0 0 2px var(--cor-p1);
-  border-color: 1px solid var(--cor-12);
+  border-color: var(--cor-12);
 }
 
 .orcamento-produto label span {
@@ -106,14 +107,10 @@
   pointer-events: none;
 }
 
-.orcamento-produto input:checked + label {
-  background: var(--cor-0);
-  color: var(--cor-11);
-}
-
 .orcamento-dados {
   border-radius: 0 5px 5px 0;
-  background: var(--cor-0) url(../../img/dec/bottom-right.svg) no-repeat bottom 20px right 20px;
+  background: var(--cor-0) url("../../img/dec/bottom-right.svg") no-repeat
+    bottom 20px right 20px;
 }
 
 .orcamento-conteudo {
@@ -126,7 +123,7 @@
 }
 
 #bikcraft:checked ~ #orcamento-bikcraft,
-#bikcraft:checked ~ #orcamento-seguro {
+#seguro:checked ~ #orcamento-seguro {
   display: grid;
   gap: 20px;
 }
@@ -166,14 +163,11 @@
   .orcamento {
     grid-template-columns: 1fr;
   }
-  .orcamento-dados {
-    border-radius: 0 0 5px 5px;
-  }
   .orcamento-produto {
     border-radius: 5px 5px 0 0;
-    background: var(--cor-11);
+    background: var(--cor-12);
   }
-  .orcamento-produto {
+  .orcamento-dados {
     border-radius: 0 0 5px 5px;
   }
 }
